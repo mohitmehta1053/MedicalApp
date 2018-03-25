@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Medical App</string>
+    <string name="title_activity_home_nav">HomeNavActivity</string>
+    <string name="import1"> Import</string>
+
+    <string name="gallery"> Gallery</string>
+    <string name="slideshow">SideShow</string>
+    <string name="tools"> Tools</string>
+    <string name="action_settings">Settings</string>
+</resources>

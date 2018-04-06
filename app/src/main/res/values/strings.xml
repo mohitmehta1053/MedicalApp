@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">Medical App</string>
-    <string name="title_activity_home_nav">HomeNavActivity</string>
-    <string name="import1"> Import</string>
+    <string name="home"> Home</string>
+    <string name="title_activity_home_nav">Home Activity</string>
+    <string name="reminder"> Reminders</string>
+    <string name="article">Articles</string>
+    <string name="notification"> Notifications</string>
+    <string name="account">Account</string>
 
-    <string name="gallery"> Gallery</string>
-    <string name="slideshow">SideShow</string>
-    <string name="tools"> Tools</string>
-    <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

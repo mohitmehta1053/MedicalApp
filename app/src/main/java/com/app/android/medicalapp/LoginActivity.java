@@ -71,6 +71,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
+        if(email.equals("admin") && password.equals("admin"))
+        {
+            Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//so that after user logs in after pressing back button he should not go back to the login page
+            startActivity(intent);
+            finish();
+        }
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {

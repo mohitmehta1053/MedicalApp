@@ -21,5 +21,8 @@
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_account_circle_black_24px"
             android:title="@string/account" />
+
+
+
     </group>
 </menu>

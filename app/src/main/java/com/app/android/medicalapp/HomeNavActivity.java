@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 
 public class HomeNavActivity extends AppCompatActivity implements ReminderFragment.OnFragmentInteractionListener,AccountFragment.OnFragmentInteractionListener,ArticleFragment.OnFragmentInteractionListener,NotificationFragment.OnFragmentInteractionListener{
 
@@ -74,6 +75,7 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                         {
                             case R.id.nav_home:
                                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
+                                //fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),new HomeFragment(),)
                                 fragmentTransaction.replace(R.id.content_frame,new HomeFragment());
                                 fragmentTransaction.commit();
                                 getSupportActionBar().setTitle("Home Fragment");

@@ -22,6 +22,11 @@
             android:icon="@drawable/ic_account_circle_black_24px"
             android:title="@string/account" />
 
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_account_circle_black_24px"
+            android:title="@string/logout" />
+
 
 
     </group>

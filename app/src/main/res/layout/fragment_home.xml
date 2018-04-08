@@ -27,7 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textCapWords"
-                android:hint="Search medicine..." />
+                android:hint="Search medicine..."
+                android:textColor="#FFC400"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.RecyclerView
@@ -40,8 +41,64 @@
         </android.support.v7.widget.RecyclerView>
 
 
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <TextView android:id="@+id/upload_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:text="Upload Prescription"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="60px"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFC400"/>
+        </android.support.design.widget.TextInputLayout>
+        <LinearLayout
+            android:id="@+id/layout_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="26dp"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:id="@+id/buttonChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="26dp"
+                android:text="Choose" />
+
+            <Button
+                android:id="@+id/buttonUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Upload" />
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/pres_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/layout_upload"
+            />
+
+
 
     </LinearLayout>
+
+
 
 
 

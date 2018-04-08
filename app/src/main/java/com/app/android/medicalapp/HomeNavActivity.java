@@ -1,5 +1,6 @@
 package com.app.android.medicalapp;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -74,9 +75,12 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                         switch (menuItem.getItemId())
                         {
                             case R.id.nav_home:
+                                HomeFragment hf =new HomeFragment();
+
                                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
                                 //fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),new HomeFragment(),)
-                                fragmentTransaction.replace(R.id.content_frame,new HomeFragment());
+                                fragmentTransaction.replace(R.id.toolbar,hf);
+                               // fragmentTransaction.addToBackStack(null);
                                 fragmentTransaction.commit();
                                 getSupportActionBar().setTitle("Home Fragment");
                                 menuItem.setChecked(true);
@@ -118,6 +122,12 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                                 menuItem.setChecked(true);
                                 mDrawerLayout.closeDrawers();
                                 break;
+
+                            case R.id.logout:
+                                Intent intent=new Intent(HomeNavActivity.this,LoginActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);//so that after user logs in after pressing back button he should not go back to the login page
+                                startActivity(intent);
+                                finish();
                         }
 
 

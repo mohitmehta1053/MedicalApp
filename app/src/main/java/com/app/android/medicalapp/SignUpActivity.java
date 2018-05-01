@@ -124,7 +124,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
        // progressBar.setVisibility(View.VISIBLE);
 
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this,new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                   //  progressBar.setVisibility(View.GONE);

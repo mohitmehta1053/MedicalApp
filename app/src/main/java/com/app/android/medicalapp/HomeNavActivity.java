@@ -71,15 +71,15 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         // set item as selected to persist highlight
-
+                    Fragment fragment=null;
                         switch (menuItem.getItemId())
                         {
                             case R.id.nav_home:
-                                HomeFragment hf =new HomeFragment();
+                                fragment =new HomeFragment();
 
                                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
                                 //fragmentTransaction.replace(((ViewGroup)getView().getParent()).getId(),new HomeFragment(),)
-                                fragmentTransaction.replace(R.id.toolbar,hf);
+                                fragmentTransaction.replace(R.id.toolbar,fragment);
                                // fragmentTransaction.addToBackStack(null);
                                 fragmentTransaction.commit();
                                 getSupportActionBar().setTitle("Home Fragment");
@@ -88,8 +88,9 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                                 break;
 
                             case R.id.nav_reminder:
+                                fragment=new ReminderFragment();
                                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.content_frame,new ReminderFragment());
+                                fragmentTransaction.replace(R.id.toolbar,fragment);
                                 fragmentTransaction.commit();
                                 getSupportActionBar().setTitle("Reminder Fragment");
                                 menuItem.setChecked(true);
@@ -97,8 +98,9 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                                 break;
 
                             case R.id.nav_article:
+                                fragment=new ArticleFragment();
                                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.content_frame,new ArticleFragment());
+                                fragmentTransaction.replace(R.id.toolbar,fragment);
                                 fragmentTransaction.commit();
                                 getSupportActionBar().setTitle("Article Fragment");
                                 menuItem.setChecked(true);
@@ -106,8 +108,9 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                                 break;
 
                             case R.id.nav_notification:
+                                fragment=new NotificationFragment();
                                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.content_frame,new NotificationFragment());
+                                fragmentTransaction.replace(R.id.toolbar,fragment);
                                 fragmentTransaction.commit();
                                 getSupportActionBar().setTitle("Notification Fragment");
                                 menuItem.setChecked(true);
@@ -115,8 +118,9 @@ public class HomeNavActivity extends AppCompatActivity implements ReminderFragme
                                 break;
 
                             case R.id.nav_account:
+                                fragment=new AccountFragment();
                                 fragmentTransaction=getSupportFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.content_frame,new AccountFragment());
+                                fragmentTransaction.replace(R.id.toolbar,fragment);
                                 fragmentTransaction.commit();
                                 getSupportActionBar().setTitle("Account Fragment");
                                 menuItem.setChecked(true);

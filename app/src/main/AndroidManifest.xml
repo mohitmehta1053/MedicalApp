@@ -16,13 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".SignUpActivity" />
         <activity
             android:name=".HomeNavActivity"
+            android:exported="true"
             android:label="@string/title_activity_home_nav"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:exported="true"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
